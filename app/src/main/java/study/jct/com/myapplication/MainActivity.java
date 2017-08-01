@@ -6,8 +6,6 @@ import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import study.jct.com.myapplication.gson.Weather;
-
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -17,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
 
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
         if (prefs.getString("weather",null) != null){
-            Intent intent = new Intent(this, Weather.class);
+            Intent intent = new Intent(this, WeatherActivity.class);
             startActivity(intent);
             finish();
         }
